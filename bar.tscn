@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://7kktyrn24sdl"]
+
+[ext_resource type="FontFile" uid="uid://bt4p7qd00ufuu" path="res://Commodore-64-v6.3.TTF" id="1_qyha7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbg6f"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = -1.0
+offset_top = 478.0
+offset_right = 1148.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbg6f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 13.150001
+anchor_bottom = 13.150001
+offset_left = 117.0
+offset_top = -2413.5
+offset_right = 1495.0
+offset_bottom = -2337.5
+theme_override_fonts/normal_font = ExtResource("1_qyha7")
+theme_override_font_sizes/normal_font_size = 24
+text = "test"
+
+[node name="Button" type="Button" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 1405.0
+offset_top = 466.0
+offset_right = 1552.0
+offset_bottom = 534.0
+text = "continue"
