@@ -32,7 +32,7 @@ offset_right = 1495.0
 offset_bottom = -2337.5
 theme_override_fonts/normal_font = ExtResource("1_qyha7")
 theme_override_font_sizes/normal_font_size = 24
-text = "test"
+text = "commit change test"
 
 [node name="Button" type="Button" parent="UI/Panel"]
 layout_mode = 0
