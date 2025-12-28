@@ -1,0 +1,248 @@
+[gd_scene load_steps=17 format=3 uid="uid://c87nrb6w3q7vi"]
+
+[ext_resource type="PackedScene" uid="uid://cgo3x6afpyso6" path="res://scenes/player.tscn" id="1_se4ta"]
+[ext_resource type="Script" uid="uid://cnep7xuthd8uc" path="res://scenes/1_scena.gd" id="1_vwkg6"]
+[ext_resource type="Texture2D" uid="uid://cxkt40sx042hm" path="res://dc6pbds-a354d62b-93ba-41e0-9b4a-1dd35eb0323b.png" id="2_3rn8m"]
+[ext_resource type="Script" uid="uid://clxnqnfvshkqi" path="res://scenes/casino_machine.gd" id="4_acfab"]
+[ext_resource type="Texture2D" uid="uid://drcvq4amofmn8" path="res://pixel-art-slot-machine-casino-and-betting-machine-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="5_cx8v0"]
+[ext_resource type="PackedScene" uid="uid://n246juquxpwy" path="res://interaction_components/interactable.tscn" id="6_7kuem"]
+[ext_resource type="PackedScene" uid="uid://d0xs3dsjw2lcy" path="res://scenes/casino_scene.tscn" id="7_cx8v0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se4ta"]
+bg_color = Color(0.20469925, 0.13808125, 0.008607211, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bg8tv"]
+size = Vector2(20, 677)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rn8m"]
+size = Vector2(1034, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny8iw"]
+size = Vector2(1050, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwkg6"]
+bg_color = Color(0.6017808, 0.4113527, 0.11994014, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wu2q"]
+size = Vector2(71, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3btc"]
+size = Vector2(91, 129)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rn8m"]
+bg_color = Color(0.34207845, 0.31861487, 0.16421124, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg8tv"]
+bg_color = Color(0.9040555, 0.8587349, 0.31414902, 1)
+
+[node name="1scena" type="Node2D"]
+position = Vector2(474, 394)
+script = ExtResource("1_vwkg6")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -2541.0
+offset_top = -1738.0
+offset_right = 2081.0
+offset_bottom = 1615.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_se4ta")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b2" type="Sprite2D" parent="Panel"]
+position = Vector2(3033, 1880)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b5" type="Sprite2D" parent="Panel"]
+position = Vector2(3033, 1497)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b6" type="Sprite2D" parent="Panel"]
+position = Vector2(3033, 1625)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b7" type="Sprite2D" parent="Panel"]
+position = Vector2(3033, 1752)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b8" type="Sprite2D" parent="Panel"]
+position = Vector2(2826.5, 1880.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b9" type="Sprite2D" parent="Panel"]
+position = Vector2(2826.5, 1497.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b10" type="Sprite2D" parent="Panel"]
+position = Vector2(2826.5, 1625.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b11" type="Sprite2D" parent="Panel"]
+position = Vector2(2826.5, 1752.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b3" type="Sprite2D" parent="Panel"]
+position = Vector2(2619.5, 1881.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b12" type="Sprite2D" parent="Panel"]
+position = Vector2(2619.5, 1498.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b13" type="Sprite2D" parent="Panel"]
+position = Vector2(2619.5, 1626.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b14" type="Sprite2D" parent="Panel"]
+position = Vector2(2619.5, 1753.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b4" type="Sprite2D" parent="Panel"]
+position = Vector2(2412.5, 1882.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b15" type="Sprite2D" parent="Panel"]
+position = Vector2(2412.5, 1499.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b16" type="Sprite2D" parent="Panel"]
+position = Vector2(2412.5, 1627.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b17" type="Sprite2D" parent="Panel"]
+position = Vector2(2412.5, 1754.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b18" type="Sprite2D" parent="Panel"]
+position = Vector2(2204.5, 1881.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b19" type="Sprite2D" parent="Panel"]
+position = Vector2(2204.5, 1498.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b20" type="Sprite2D" parent="Panel"]
+position = Vector2(2204.5, 1626.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b21" type="Sprite2D" parent="Panel"]
+position = Vector2(2204.5, 1753.8789)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b22" type="Sprite2D" parent="Panel"]
+position = Vector2(3033, 1367.0001)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b23" type="Sprite2D" parent="Panel"]
+position = Vector2(2827, 1369.0001)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b24" type="Sprite2D" parent="Panel"]
+position = Vector2(2619, 1369.0001)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b25" type="Sprite2D" parent="Panel"]
+position = Vector2(2412, 1371.0001)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="Dc6PbdsA354d62b93Ba41e09b4a1Dd35Eb0323b26" type="Sprite2D" parent="Panel"]
+position = Vector2(2203, 1370.0001)
+scale = Vector2(0.20214847, 0.12476351)
+texture = ExtResource("2_3rn8m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-438, -113)
+shape = SubResource("RectangleShape2D_bg8tv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(602, -108)
+shape = SubResource("RectangleShape2D_bg8tv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(83, -439)
+shape = SubResource("RectangleShape2D_3rn8m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(81, 221)
+shape = SubResource("RectangleShape2D_ny8iw")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 359.0
+offset_top = -424.0
+offset_right = 586.0
+offset_bottom = -363.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vwkg6")
+
+[node name="drink" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 10.0
+offset_right = 209.0
+offset_bottom = 52.0
+text = "drink"
+
+[node name="CasinoMachine" type="StaticBody2D" parent="."]
+script = ExtResource("4_acfab")
+
+[node name="PixelArtSlotMachineCasinoAndBettingMachineIconFor8BitGameOnWhiteBackgroundVectorRemovebgPreview" type="Sprite2D" parent="CasinoMachine"]
+position = Vector2(413, -272)
+scale = Vector2(0.18433735, 0.18433735)
+texture = ExtResource("5_cx8v0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CasinoMachine"]
+position = Vector2(412.5, -267.5)
+shape = SubResource("RectangleShape2D_6wu2q")
+
+[node name="interactable" parent="CasinoMachine" instance=ExtResource("6_7kuem")]
+interact_name = "PlayCasino"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CasinoMachine/interactable"]
+position = Vector2(411.5, -269.5)
+shape = SubResource("RectangleShape2D_i3btc")
+
+[node name="player" parent="." instance=ExtResource("1_se4ta")]
+position = Vector2(115, -62)
+
+[node name="drunk_bar" type="ProgressBar" parent="player"]
+offset_left = -45.0
+offset_top = -98.0
+offset_right = 44.0
+offset_bottom = -84.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3rn8m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bg8tv")
+max_value = 10.0
+value = 2.0
+show_percentage = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(82, -111)
+zoom = Vector2(1.13, 1.02)
+
+[node name="CasinoScene" parent="." instance=ExtResource("7_cx8v0")]
+position = Vector2(-474, -394)
+
+[connection signal="pressed" from="Panel2/drink" to="player" method="_on_add_drink_pressed"]

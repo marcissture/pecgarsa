@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://du0rrgf2aghvi"]
+
+[ext_resource type="Script" uid="uid://4jp4euqrwjvx" path="res://interaction_components/interacting_component.gd" id="1_1m31a"]
+[ext_resource type="FontFile" uid="uid://bt4p7qd00ufuu" path="res://Commodore-64-v6.3.TTF" id="1_xa01l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m31a"]
+size = Vector2(83, 102)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lh3wi"]
+font = ExtResource("1_xa01l")
+font_size = 15
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InteractingComponent" type="Node2D"]
+script = ExtResource("1_1m31a")
+
+[node name="interactRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactRange"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_1m31a")
+
+[node name="InteractLabel" type="Label" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -79.0
+offset_right = 46.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "E to interact"
+label_settings = SubResource("LabelSettings_lh3wi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="interactRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="interactRange" to="." method="_on_interact_range_area_exited"]

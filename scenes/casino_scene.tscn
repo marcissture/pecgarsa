@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0xs3dsjw2lcy"]
+
+[ext_resource type="Script" uid="uid://c8ncc1jxgetqa" path="res://scenes/casino_scene.gd" id="1_4cajq"]
+
+[sub_resource type="Gradient" id="Gradient_7kuem"]
+offsets = PackedFloat32Array(0.42666668)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6wu2q"]
+gradient = SubResource("Gradient_7kuem")
+width = 70
+height = 70
+
+[node name="CasinoScene" type="Node2D"]
+script = ExtResource("1_4cajq")
+
+[node name="CasinoGame" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CasinoGame"]
+offset_left = 47.0
+offset_top = 357.0
+offset_right = 1066.0
+offset_bottom = 599.0
+
+[node name="Gamble" type="Button" parent="CasinoGame/Panel"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 83.0
+offset_right = 950.0
+offset_bottom = 155.0
+text = "Gamble"
+icon = SubResource("GradientTexture2D_6wu2q")
+icon_alignment = 1
+
+[connection signal="pressed" from="CasinoGame/Panel/Gamble" to="." method="_on_gamble_pressed"]
