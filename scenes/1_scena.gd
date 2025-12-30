@@ -7,9 +7,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#if target.db == 10:
-	#get_tree().change_scene_to_file("res://scenes/1_scena.tscn") #Iekavās likt scēnu, kura paigaidām mums nav
-	pass
+	if target.db == 10:
+		get_tree().change_scene_to_file("res://scenes/3d.tscn") #Iekavās likt scēnu, kura paigaidām mums nav
 
 	
 func _on_drink_pressed() -> void:

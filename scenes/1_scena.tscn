@@ -35,9 +35,10 @@ bg_color = Color(0.34207845, 0.31861487, 0.16421124, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg8tv"]
 bg_color = Color(0.9040555, 0.8587349, 0.31414902, 1)
 
-[node name="1scena" type="Node2D"]
+[node name="1scena" type="Node2D" node_paths=PackedStringArray("target")]
 position = Vector2(474, 394)
 script = ExtResource("1_vwkg6")
+target = NodePath("player")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -2541.0

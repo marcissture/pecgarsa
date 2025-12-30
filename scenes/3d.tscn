@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj64rxna7ofo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j0624"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tdm2k"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_j0624")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_tdm2k")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.7717968, -0.35179114, 0.52969104, 0.118584275, 0.8980354, 0.42363945, -0.62471396, -0.2641506, 0.73481786, 0.91912776, 0.6305696, 1.3898963)
+fov = 88.993805
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5463444, 1.2722728, 1.7189841)
