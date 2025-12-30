@@ -39,4 +39,4 @@ func _on_button_pressed() -> void:
 
 	label.text = teksti[i]
 
-#sitais komentars testam
+#sitais komentars testam 2
