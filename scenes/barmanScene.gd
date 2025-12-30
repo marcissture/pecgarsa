@@ -29,11 +29,12 @@ func _on_button_pressed() -> void:
 		i = -1
 		label.text = "Welcome back!"
 		
-		# Set db to 5 once
-		if target and not target.has_meta("db_set"):
-			target.db = 5
+		# Increase db by 5 once
+		if target and not target.has_meta("db_added"):
+			target.db += 5
+			target.db = min(target.db, target.drunk_bar.max_value)
 			target.drunk_bar.value = target.db # update the bar display
-			target.set_meta("db_set", true)  # mark it as already set
+			target.set_meta("db_added", true)  # mark it as already set
 
 		return
 
