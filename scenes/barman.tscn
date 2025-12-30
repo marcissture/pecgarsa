@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwjwh7wjfiuwu"]
+
+[ext_resource type="Script" uid="uid://c3bksb7klqnsn" path="res://scenes/barmanScene.gd" id="1_ih62i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qolis"]
+font_size = 32
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ih62i")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 357.0
+offset_right = 1066.0
+offset_bottom = 599.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 30.000002
+offset_top = 22.000015
+offset_right = 918.4702
+offset_bottom = 220.92976
+text = "Welcome!"
+label_settings = SubResource("LabelSettings_qolis")
+autowrap_mode = 2
+
+[node name="Continue" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 180.0
+offset_right = 1000.0
+offset_bottom = 224.0
+rotation = -0.003451876
+text = ">>>"
+label_settings = SubResource("LabelSettings_qolis")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1020.0
+offset_bottom = 242.0
+flat = true
+alignment = 2
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c87nrb6w3q7vi"]
+[gd_scene load_steps=28 format=3 uid="uid://c87nrb6w3q7vi"]
 
 [ext_resource type="PackedScene" uid="uid://cgo3x6afpyso6" path="res://scenes/player.tscn" id="1_se4ta"]
 [ext_resource type="Script" uid="uid://cnep7xuthd8uc" path="res://scenes/1_scena.gd" id="1_vwkg6"]
@@ -6,12 +6,19 @@
 [ext_resource type="Script" uid="uid://clxnqnfvshkqi" path="res://scenes/casino_machine.gd" id="4_acfab"]
 [ext_resource type="Texture2D" uid="uid://drcvq4amofmn8" path="res://pixel-art-slot-machine-casino-and-betting-machine-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="5_cx8v0"]
 [ext_resource type="PackedScene" uid="uid://n246juquxpwy" path="res://interaction_components/interactable.tscn" id="6_7kuem"]
+[ext_resource type="Script" uid="uid://bge4dlx7lduvd" path="res://scenes/bartender.gd" id="6_dibrv"]
 [ext_resource type="PackedScene" uid="uid://d0xs3dsjw2lcy" path="res://scenes/casino_scene.tscn" id="7_cx8v0"]
+[ext_resource type="Texture2D" uid="uid://bbu0r8o3p7xyx" path="res://assets/Furniture.png" id="7_dfppi"]
+[ext_resource type="Texture2D" uid="uid://7o0o321etr1k" path="res://assets/shelf.png" id="7_i3btc"]
 [ext_resource type="Texture2D" uid="uid://b3ga23ap2r5xm" path="res://bartender-game.png" id="8_6wu2q"]
 [ext_resource type="Texture2D" uid="uid://noh36e1qi0k7" path="res://bar.png" id="9_i3btc"]
+[ext_resource type="PackedScene" uid="uid://cwjwh7wjfiuwu" path="res://scenes/barman.tscn" id="12_0v27y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se4ta"]
 bg_color = Color(0.20469925, 0.13808125, 0.008607211, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dfppi"]
+radius = 18.753134
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bg8tv"]
 size = Vector2(20, 677)
@@ -31,26 +38,23 @@ size = Vector2(21, 202)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dibrv"]
 size = Vector2(125, 50)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwkg6"]
-bg_color = Color(0.6017808, 0.4113527, 0.11994014, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wu2q"]
 size = Vector2(71, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3btc"]
 size = Vector2(91, 129)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rn8m"]
-bg_color = Color(0.34207845, 0.31861487, 0.16421124, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg8tv"]
-bg_color = Color(0.9040555, 0.8587349, 0.31414902, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1n6rw"]
 size = Vector2(207.9231, 255.00002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6px0"]
 size = Vector2(305.99976, 594.4424)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rn8m"]
+bg_color = Color(0.34207845, 0.31861487, 0.16421124, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg8tv"]
+bg_color = Color(0.9040555, 0.8587349, 0.31414902, 1)
 
 [node name="1scena" type="Node2D" node_paths=PackedStringArray("target")]
 position = Vector2(474, 394)
@@ -189,6 +193,39 @@ position = Vector2(2203, 1370.0001)
 scale = Vector2(0.20214847, 0.12476351)
 texture = ExtResource("2_3rn8m")
 
+[node name="Table_coll" type="StaticBody2D" parent="."]
+position = Vector2(115, -62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table_coll"]
+position = Vector2(25.999998, -216.00002)
+scale = Vector2(2.5899997, 2.5899997)
+shape = SubResource("CircleShape2D_dfppi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Table_coll"]
+position = Vector2(327.99997, 141.99995)
+scale = Vector2(2.5899997, 2.5899997)
+shape = SubResource("CircleShape2D_dfppi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Table_coll"]
+position = Vector2(-137, -216.00002)
+scale = Vector2(2.5899997, 2.5899997)
+shape = SubResource("CircleShape2D_dfppi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Table_coll"]
+position = Vector2(-435.99997, -23.00003)
+scale = Vector2(2.5899997, 2.5899997)
+shape = SubResource("CircleShape2D_dfppi")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Table_coll"]
+position = Vector2(-247, 154.99998)
+scale = Vector2(2.5899997, 2.5899997)
+shape = SubResource("CircleShape2D_dfppi")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Table_coll"]
+position = Vector2(-435, 153)
+scale = Vector2(2.5899997, 2.5899997)
+shape = SubResource("CircleShape2D_dfppi")
+
 [node name="GameBorder" type="StaticBody2D" parent="."]
 position = Vector2(1, -4)
 
@@ -208,34 +245,19 @@ shape = SubResource("RectangleShape2D_3rn8m")
 position = Vector2(81, 221)
 shape = SubResource("RectangleShape2D_ny8iw")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="barColl" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barColl"]
 position = Vector2(-260.75, -331)
 shape = SubResource("RectangleShape2D_dfppi")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="barColl"]
 position = Vector2(-157.5, -331)
 shape = SubResource("RectangleShape2D_0v27y")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="barColl"]
 position = Vector2(-211.5, -255)
 shape = SubResource("RectangleShape2D_dibrv")
-
-[node name="Panel2" type="Panel" parent="."]
-offset_left = 359.0
-offset_top = -424.0
-offset_right = 586.0
-offset_bottom = -363.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_vwkg6")
-
-[node name="drink" type="Button" parent="Panel2"]
-layout_mode = 0
-offset_left = 141.0
-offset_top = 10.0
-offset_right = 209.0
-offset_bottom = 52.0
-text = "drink"
 
 [node name="CasinoMachine" type="StaticBody2D" parent="." node_paths=PackedStringArray("target")]
 script = ExtResource("4_acfab")
@@ -257,6 +279,93 @@ interact_name = "E to play slots"
 position = Vector2(411.5, -269.5)
 shape = SubResource("RectangleShape2D_i3btc")
 
+[node name="bartenderGame" type="StaticBody2D" parent="." node_paths=PackedStringArray("target")]
+script = ExtResource("6_dibrv")
+target = NodePath("../barmanScene")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bartenderGame"]
+position = Vector2(-209.5, -309.5)
+scale = Vector2(0.25490198, 0.25490195)
+shape = SubResource("RectangleShape2D_1n6rw")
+
+[node name="Bartender" type="Sprite2D" parent="bartenderGame"]
+position = Vector2(-212, -308)
+scale = Vector2(0.25490198, 0.25490195)
+texture = ExtResource("8_6wu2q")
+
+[node name="interactable" parent="bartenderGame" instance=ExtResource("6_7kuem")]
+position = Vector2(-209.5, -309.5)
+scale = Vector2(0.25490198, 0.25490195)
+interact_name = "Talk to Bartender"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bartenderGame/interactable"]
+position = Vector2(1.9613037, 155.89417)
+shape = SubResource("RectangleShape2D_f6px0")
+
+[node name="Shelf" type="Sprite2D" parent="."]
+position = Vector2(-237.99997, -397.99997)
+scale = Vector2(0.31975117, 0.31975114)
+texture = ExtResource("7_i3btc")
+
+[node name="Shelf2" type="Sprite2D" parent="."]
+position = Vector2(-179.99997, -397.99997)
+scale = Vector2(0.31975117, 0.31975114)
+texture = ExtResource("7_i3btc")
+
+[node name="Table1" type="Sprite2D" parent="."]
+position = Vector2(140.64285, -272.4375)
+scale = Vector2(3.755953, 3.7559526)
+texture = ExtResource("7_dfppi")
+region_enabled = true
+region_rect = Rect2(4, 88, 24, 21)
+
+[node name="Table4" type="Sprite2D" parent="."]
+position = Vector2(443.00006, 83.99997)
+scale = Vector2(3.755953, 3.7559526)
+texture = ExtResource("7_dfppi")
+region_enabled = true
+region_rect = Rect2(4, 88, 24, 21)
+
+[node name="Table2" type="Sprite2D" parent="."]
+position = Vector2(-21.999985, -275.00003)
+scale = Vector2(3.755953, 3.7559526)
+texture = ExtResource("7_dfppi")
+region_enabled = true
+region_rect = Rect2(4, 88, 24, 21)
+
+[node name="Table3" type="Sprite2D" parent="."]
+position = Vector2(-321, -84.00003)
+scale = Vector2(3.755953, 3.7559526)
+texture = ExtResource("7_dfppi")
+region_enabled = true
+region_rect = Rect2(4, 88, 24, 21)
+
+[node name="Table6" type="Sprite2D" parent="."]
+position = Vector2(-131.99998, 95)
+scale = Vector2(3.755953, 3.7559526)
+texture = ExtResource("7_dfppi")
+region_enabled = true
+region_rect = Rect2(4, 88, 24, 21)
+
+[node name="Table5" type="Sprite2D" parent="."]
+position = Vector2(-320, 93)
+scale = Vector2(3.755953, 3.7559526)
+texture = ExtResource("7_dfppi")
+region_enabled = true
+region_rect = Rect2(4, 88, 24, 21)
+
+[node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(-207, -310)
+scale = Vector2(1.6600001, 1.6600001)
+texture = ExtResource("9_i3btc")
+
+[node name="CasinoScene" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_cx8v0")]
+offset_left = -612.0
+offset_top = -558.0
+offset_right = -612.0
+offset_bottom = -558.0
+target = NodePath("../player")
+
 [node name="player" parent="." instance=ExtResource("1_se4ta")]
 position = Vector2(115, -62)
 
@@ -275,32 +384,9 @@ show_percentage = false
 position = Vector2(82, -111)
 zoom = Vector2(1.13, 1.02)
 
-[node name="CasinoScene" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_cx8v0")]
-offset_left = -620.0
-offset_top = -557.0
-offset_right = -620.0
-offset_bottom = -557.0
+[node name="barmanScene" parent="." node_paths=PackedStringArray("target") instance=ExtResource("12_0v27y")]
+offset_left = -475.0
+offset_top = -394.0
+offset_right = -77.0
+offset_bottom = -247.0
 target = NodePath("../player")
-
-[node name="BartenderGame" type="Sprite2D" parent="."]
-position = Vector2(-212, -308)
-scale = Vector2(0.25490198, 0.25490195)
-texture = ExtResource("8_6wu2q")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BartenderGame"]
-position = Vector2(9.807739, -5.884613)
-shape = SubResource("RectangleShape2D_1n6rw")
-
-[node name="interactable" parent="BartenderGame/CollisionShape2D" instance=ExtResource("6_7kuem")]
-interact_name = "Talk to Bartender"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BartenderGame/CollisionShape2D/interactable"]
-position = Vector2(1.9613037, 155.89417)
-shape = SubResource("RectangleShape2D_f6px0")
-
-[node name="Bar" type="Sprite2D" parent="."]
-position = Vector2(-207, -310)
-scale = Vector2(1.6600001, 1.6600001)
-texture = ExtResource("9_i3btc")
-
-[connection signal="pressed" from="Panel2/drink" to="player" method="_on_add_drink_pressed"]

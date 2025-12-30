@@ -2,24 +2,24 @@
 
 [ext_resource type="Script" uid="uid://c8ncc1jxgetqa" path="res://scenes/casino_scene.gd" id="1_4cajq"]
 
-[sub_resource type="Gradient" id="Gradient_7kuem"]
+[sub_resource type="Gradient" id="Gradient_4cajq"]
 offsets = PackedFloat32Array(0.53866667)
 colors = PackedColorArray(0.3001021, 0.6273539, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_6wu2q"]
-gradient = SubResource("Gradient_7kuem")
+gradient = SubResource("Gradient_4cajq")
 width = 70
 height = 70
 
 [sub_resource type="LabelSettings" id="LabelSettings_4cajq"]
 font_size = 32
 
-[sub_resource type="Gradient" id="Gradient_4cajq"]
+[sub_resource type="Gradient" id="Gradient_qx2p7"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(1, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qx2p7"]
-gradient = SubResource("Gradient_4cajq")
+gradient = SubResource("Gradient_qx2p7")
 
 [node name="CasinoScene" type="Control"]
 layout_mode = 3
@@ -51,7 +51,6 @@ offset_left = 50.0
 offset_top = 31.0
 offset_right = 90.0
 offset_bottom = 54.0
-rotation = -0.003451876
 text = "Let's go gambling!"
 label_settings = SubResource("LabelSettings_4cajq")
 
