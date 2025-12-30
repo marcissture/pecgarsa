@@ -38,3 +38,5 @@ func _on_button_pressed() -> void:
 		return
 
 	label.text = teksti[i]
+
+#sitais komentars testam
